@@ -69,5 +69,5 @@ def post_edit(request,pid):
         data.update_post(pid,title,content,author)
         return redirect("blog:post_detail",pid=post.id)
 
-    return render(request,"blog/post_edit.html",{"mode":"edit","post":post})
+    return render(request,"blog/post_form.html",{"mode":"edit","post":post})
 
